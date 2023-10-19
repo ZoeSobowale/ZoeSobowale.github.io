@@ -43,7 +43,7 @@ function scrollActive(){
 /*====== Typing animation =======*/
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
-    var dataText = [ "Hello!", " I'm a CS Student", "And", "Web Developer ", "Zoe Sobowale"];
+    var dataText = [ "Hi!", " I'm a Front-End Devoloper","Content Creator","Zoe Sobowale"];
     
     // type one text in the typwriter
     // keeps calling itself until the text is finished
