@@ -1,3 +1,20 @@
+/*==== LOGO SHRINK ==== */
+$(function(){
+  var shrinkHeader = $(window).height();
+   $(window).scroll(function() {
+     var scroll = getCurrentScroll();
+       if ( scroll >= shrinkHeader ) {
+            $('.header').addClass('shrink');
+         }
+         else {
+             $('.header').removeClass('shrink');
+         }
+   });
+ function getCurrentScroll() {
+     return window.pageYOffset || document.documentElement.scrollTop;
+     }
+ })
+ 
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
@@ -43,7 +60,7 @@ function scrollActive(){
 /*====== Typing animation =======*/
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
-    var dataText = [ "Hi!", " I'm a Front-End Devoloper","Content Creator","Zoe Sobowale"];
+    var dataText = [ "Hello!", " I am a","Front End Developer","Web Developer","Zoe Sobowale"];
     
     // type one text in the typwriter
     // keeps calling itself until the text is finished

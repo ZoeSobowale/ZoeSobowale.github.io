@@ -9,14 +9,15 @@
 
 /*===== Colour =====*/
 :root{
-    --first-colour: #acbec4;
-    --second-colour:
+    --first-colour: #4a2360;
+    --second-colour: #c9628a;
+    --third-colour:#cbf3eb;
     --white-colour: #FEFBFE;
     --dark-colour: #07020D;
     --text-colour: #001021;
 }
 
-/*===== Fuente y tipografia =====*/
+/*===== Font and typography =====*/
 :root{
     --body-font: 'Montserrat', sans-serif;
     --big-font-size: 6.25rem;
@@ -33,7 +34,7 @@
     }
 }
 
-/*===== Margenes =====*/
+/*===== Margins =====*/
 :root{
     --mb-1: .5rem;
     --mb-2: 1rem;
@@ -118,7 +119,7 @@ img{
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--first-colour);
+    background-color: var(--second-colour);
 }
 
 /*===== NAV =====*/
@@ -152,7 +153,10 @@ img{
     color: var(--first-colour);
 }
 .nav__logo{
-    color: var(--white-colour);
+    width: 180px;
+    height: 70px;
+    overflow: hidden;
+    margin-top: -20px;
 }
 .nav__toggle{
     color: var(--white-colour);
@@ -176,24 +180,26 @@ img{
     background-color: var(--first-colour);
 }
 
+
 /*===== HOME =====*/
 .home{
     position: relative;
-    background-color: var(--first-colour);
+    background-color: var(--second-colour);
     overflow: hidden;
 }
 .home__container{
-    height: calc(100vh - var(--header-height));
-    row-gap: 5rem;
+    height: 100vh;
+    row-gap: 8rem;
 }
 .home__typing{
     align-self: flex-end;
     font-size: var(--big-font-size);
     color: var(--white-colour);
     text-transform: uppercase;
+    margin-right: 30px; 
 }
 span {
-    border-right: .05em solid;
+    border-right: .03em solid;
     animation: caret 1s steps(1) infinite;
 }
   
@@ -210,12 +216,6 @@ span {
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     color: var(--white-colour);
-}
-.home__img{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 295px;
 }
 
 /* ===== ABOUT =====*/
@@ -481,7 +481,7 @@ span {
     }
 }
 
-/* For tall screens on mobiles y desktop*/
+/* For tall screens on mobiles & desktop*/
 @media screen and (min-height: 721px) {
     .home__container {
         height: 640px;
