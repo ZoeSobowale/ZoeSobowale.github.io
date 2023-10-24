@@ -43,7 +43,7 @@ function scrollActive(){
 /*====== Typing animation =======*/
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
-    var dataText = [ "Hello!", " I am a","Front End Developer","Web Developer","Zoe Sobowale"];
+    var dataText = [ "Hello! I'm a Junior"," Front End Developer","Web Developer","Zoe Sobowale"];
     
     // type one text in the typwriter
     // keeps calling itself until the text is finished
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded',function(event){
        if (typeof dataText[i] == 'undefined'){
           setTimeout(function() {
             StartTextAnimation(0);
-          }, 20000);
+          }, 10000);
        }
        // check if dataText[i] exists
       if (i < dataText[i].length) {
@@ -107,7 +107,8 @@ sr.reveal('.about__social-icon', {delay: 600, interval: 200})
 /*SCROLL SKILLS*/
 sr.reveal('.skills__subtitle', {})
 sr.reveal('.skills__name', {distance: '20px', delay: 50, interval: 100})
-sr.reveal('.skills__img', {delay: 400})
+sr.reveal('.skills__section',{delay: 200})
+sr.reveal('.skills__item', {delay: 400})
 
 /*SCROLL PORTFOLIO*/
 sr.reveal('.portfolio__img', {interval: 200})
@@ -117,6 +118,8 @@ sr.reveal('.contact__subtitle', {})
 sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
+sr.reveal('.cv__button', {delay: 600})
+
 
 
 

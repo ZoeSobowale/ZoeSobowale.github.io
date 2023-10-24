@@ -14,13 +14,16 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
 
         <title>Portfolio responsive complete</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/3-bg.png">
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Zoe Sobowale</a>
+                    <a href="#" class="nav__logo">
+                        <img src="assets/images/2-bg.png" alt="PinchofZ Logo">
+                    </a>
             </div>
             
             <div class="nav__menu" id="nav-menu">
@@ -33,7 +36,7 @@
               </ul>
             </div>
             
-<div class="nav__toggle" id="nav-toggle">
+            <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
           </div>
 </nav>
@@ -78,26 +81,94 @@
     <!--Skills--------------->
     <section class="skills section" id="skills">
         <h2 class="section-title">Skills</h2>
-
+    <h3 class ="skills__section">Programming languages</h3>
         <div class="skills__container bd-grid">
-            <div class="skills__box">
-                <h3 class="skills__subtitle">Development</h3>
-                <div class="skills__name"><i class="devicon-html5-plain-wordmark"></i></div>
-                <div class="skills__name"><i class="devicon-css3-plain-wordmark"></i></div>
-                <div class="skills__name"><i class="devicon-javascript-plain"></i></div>
-                <div class="skills__name"><i class="devicon-sass-original"></i></div>
-                
-                
-                
-                <h3 class="skills__subtitle">Backend</h3>
-                <div class="skills__name"><i class="devicon-python-plain-wordmark"></i></div>
-                    <div class="skills__name"><i class="devicon-csharp-plain-wordmark"></i></div>
-                        <div class="skills__name"><i class="devicon-java-plain-wordmark"></i></div>
+            <div class="skills__item">
+                <i class="devicon-html5-plain"></i>
+                <p class="skills__label">HTML5</p>
             </div>
-
+            <div class="skills__item">
+                <i class="devicon-css3-plain"></i>
+                <p class="skills__label">CSS</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-javascript-plain"></i>
+                <p class="skills__label">JavaScript</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-csharp-plain"></i>
+                <p class="skills__label">C#</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-python-plain"></i>
+                <p class="skills__label">Python</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-php-plain"></i>
+                <p class="skills__label">PHP</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-typescript-plain"></i>
+                <p class="skills__label">TypeScript</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-java-plain"></i>
+                <p class="skills__label">Java</p>
         </div>
-    </section>
+        </div>
+        <h3 class ="skills__section">Frameworks & libraries</h3>
+        <div class="skills__container bd-grid">
+            <div class="skills__item">
+                <i class="devicon-tailwindcss-plain"></i>
+                <p class="skills__label">TailWind CSS</p>
+            </div>
+            <div class="skills__item">
+                    <i class="devicon-react-original"></i>
+                    <p class="skills__label">React/React Native</p>
+            </div>
+            <div class="skills__item">
+                    <i class="devicon-angularjs-plain"></i>
+                    <p class="skills__label">AngularJs</p>
+            </div>
+            <div class="skills__item">
+                    <i class="devicon-bootstrap-plain"></i>
+                    <p class="skills__label">Bootstrap CSS</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-nextjs-plain"></i>
+                <p class="skills__label">NextJs</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-jquery-plain"></i>
+                <p class="skills__label">JQuery</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-nodejs-plain"></i>
+                <p class="skills__label">Node.Js</p>
+        </div>
+        </div>
+        <h3 class ="skills__section">Technologies</h3>
+        <div class="skills__container bd-grid">
+            <div class="skills__item">
+                    <i class="devicon-mysql-plain"></i>
+                    <p class="skills__label">My SQL</p>
+            </div>
+            <div class="skills__item">
+                <i class="devicon-github-plain"></i>
+                <p class="skills__label">GitHub</p>
+            </div>
+        </div>
+        <h3 class ="skills__section">Website builders</h3>
+        <div class="skills__container bd-grid">
+            <div class="skills__item">
+                <i class="devicon-wordpress-plain"></i>
+                <p class="skills__label">WordPress</p>
+            </div>
+        </div>
 
+        
+    </section>
+    
     <!--Porfolio--------------->
     <section class="portfolio section" id="portfolio">
         <h2 class="section-title">Portfolio</h2>
@@ -155,8 +226,11 @@
         <div class="contact__container bd-grid">
             <div class="contact__info">
                 <h3 class="contact__subtitle">EMAIL</h3>
-                <span class="contact__text">info.mail.com</span>
-
+                <p class="contact__text">zoesobowale@gmail.com</p>
+                <h3 class="contact__subtitle">DOWNLOAD CV</h3>
+                <form method="get" action="assets/Zoe-Sobowale-CV.pdf" >
+                    <button type="submit" class="cv__button">Download</button>
+                </form>
             </div>
 
             <form action="" class="contact__form">
@@ -167,7 +241,7 @@
 
                 <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
 
-                <input type="submit" value="Submnit" class="contact__button">
+                <input type="submit" value="Submit" class="contact__button">
             </form>
         </div>
     </section>
@@ -177,7 +251,7 @@
         <div class="footer__container bd-grid">
             <div class="footer__data">
                 <h2 class="footer__title">Zoe Sobowale</h2>
-                <p class="footer__text">I'm Zoe and this is my personal website</p>
+                <p class="footer__text"></p>
             </div>
 
             <div class="footer__data">
@@ -193,8 +267,9 @@
             
             <div class="footer__data">
                 <h2 class="footer__title">FOLLOW</h2>
-                <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://www.linkedin.com/in/zoe-sobowale/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/ZoeSobowale" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.youtube.com/channel/UCmBRnQ77aZ2HIAjlY7NTTzQ" class="about__social-icon"><i class='bx bxl-youtube' ></i></a>
             </div>
 
 

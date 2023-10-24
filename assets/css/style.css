@@ -20,14 +20,14 @@
 /*===== Font and typography =====*/
 :root{
     --body-font: 'Montserrat', sans-serif;
-    --big-font-size: 6.25rem;
+    --big-font-size: 10.25rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
 }
 @media screen and (min-width: 768px){
     :root{
-        --big-font-size: 4rem;
+        --big-font-size: 5rem;
         --h2-font-size: 2rem;
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
@@ -105,7 +105,7 @@ img{
 
 /*===== LAYOUT =====*/
 .bd-grid{
-    max-width: 1024px;
+    max-width: 1100px;
     display: grid;
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
@@ -128,6 +128,10 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.nav__logo img {
+    width: 150px; 
+    height: auto;
 }
 @media screen and (max-width: 768px){
     .nav__menu{
@@ -157,6 +161,7 @@ img{
     height: 70px;
     overflow: hidden;
     margin-top: -20px;
+    color: var(--first-colour);
 }
 .nav__toggle{
     color: var(--white-colour);
@@ -188,8 +193,9 @@ img{
     overflow: hidden;
 }
 .home__container{
-    height: 100vh;
-    row-gap: 8rem;
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    height: auto; /* Remove fixed height */
 }
 .home__typing{
     align-self: flex-end;
@@ -258,24 +264,30 @@ span {
 }
 
 /* ===== SKILLS =====*/
-.skills__container{
+.skills__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem; /* Adjusted gap value */
     justify-items: center;
-    row-gap: 2rem;
+    text-align: center;
 }
-.skills__subtitle{
+.skills__section{
+    position: relative;
+    font-size: var(--h3-font-size);
     color: var(--first-colour);
-    margin-bottom: var(--mb-3);
+    margin: var(--mb-4) 0;
+    text-align: center;
 }
-.skills__name{
+.skills__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 3rem;
-    margin: 0 var(--mb-2);;
 }
-.skills__name:hover{
-    background-color: var(--first-colour);
-    color: var(--white-colour);
-}
-.skills__img img{
-    border-radius: .5rem;
+.skills__label {
+    margin-top: 0.3rem; /* Adjusted margin-top value */
+    font-size: 1rem;
+    color: var(--text-colour);
 }
 
 /* ===== PORTFOLIO =====*/
@@ -340,6 +352,17 @@ span {
     margin-bottom: var(--mb-4);
     border-radius: .5rem;
 }
+.cv__button{
+    display: block;
+    background-color: var(--third-colour);
+    color: var(--dark-colour);
+    padding: .75rem 2.5rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+}
 .contact__button{
     display: block;
     background-color: var(--first-colour);
@@ -355,7 +378,7 @@ span {
 
 /* ===== FOOTER=====*/
 .footer{
-    background-color: var(--dark-colour);
+    background-color: var(--second-colour);
 }
 .footer__container{
     row-gap: 2rem;
@@ -381,11 +404,6 @@ span {
 
 /* ===== MEDIA QUERIES =====*/
 /* For small devices */
-@media screen and (max-width: 320px) {
-  .home__img {
-    width: 230px;
-  }
-}
 
 @media screen and (min-width: 768px){
     body{
@@ -430,9 +448,9 @@ span {
         grid-template-rows: 1.7fr 1fr;
         row-gap: 0;
     }
-    .home__img{
-        width: 524px;
-        right: 10%;
+    .home__typing {
+        font-size: 3rem; 
+        margin-right: 10px; 
     }
 
     .about__container{
@@ -450,7 +468,7 @@ span {
     }
 
     .skills__container{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         align-items: center;
     }
 
@@ -484,10 +502,13 @@ span {
 /* For tall screens on mobiles & desktop*/
 @media screen and (min-height: 721px) {
     .home__container {
-        height: 640px;
+        height: 440px;
     }
-    .home__img {
-        width: 500px;
-        right: 24%;
+}
+
+@media screen and (max-width: 480px) {
+    .home__typing {
+        font-size: 2rem; 
+        margin-right: 5px; 
     }
 }
