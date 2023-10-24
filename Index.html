@@ -233,15 +233,23 @@
                 </form>
             </div>
 
-            <form action="contact.php" class="contact__form" method="post">
+            <form action="https://formspree.io/f/meqbnzon" method="POST">
+                
                 <div class="contact__inputs">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
+                <label for ="name">
+                <input type="text" placeholder="Name" class="contact__input" name="name">
+                </label>
+                <label>
+                    <input type="mail" placeholder="Email" class="contact__input" name="email">
+                  </label>
                 </div>
 
-                <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-
-                <input type="submit" value="Submit" class="contact__button">
+                  <label>
+                    Your message:
+                    <textarea name="message" id="" cols="0" rows="10" class="contact__input" name="message"></textarea>
+                  </label>
+                  <!-- your other form fields go here -->
+                  <input type="submit" value="Submit" class="contact__button"> 
             </form>
         </div>
     </section>
