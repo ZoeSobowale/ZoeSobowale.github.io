@@ -1,21 +1,35 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+    // Get form data
+    $name = htmlspecialchars($_POST["name"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $message = htmlspecialchars($_POST["message"]);
+
+    // Check if all fields are filled
+    if (empty($name) || empty($email) || empty($message)) {
+        echo "All fields are required.";
+        exit();
+    }
+
+    // Validate email address
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email address.";
+        exit();
+    }
 
     // Add code to process the form data here (e.g., send an email, save to a database, etc.)
-
     // For example, sending an email
-    $to = "youremail@example.com";
+    $to = "zoesobowale@gmail.com";
     $subject = "Contact Form Submission";
     $body = "Name: $name\nEmail: $email\nMessage:\n$message";
 
-    // Uncomment the following line to send the email
-    // mail($to, $subject, $body);
+    mail($to, $subject, $body);
 
-    // Redirect the user to a thank you page
-    header("Location: thank-you.html");
-    exit();
+    // If sending email is successful
+    echo "success";
+
+} else {
+    echo "Invalid request.";
 }
 ?>
+
