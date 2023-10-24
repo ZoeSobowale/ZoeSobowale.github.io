@@ -317,13 +317,15 @@ span {
     border-radius: .5rem;
     cursor: pointer;
     backdrop-filter: blur(10px);
-    transition: .3s;
+    transition: .5s;
 }
 .portfolio__img:hover .portfolio__link{
     bottom: 0;
 }
 .portfolio__link-name{
     color: var(--dark-colour);
+    font-size: var(--normal-font-size);
+    align-items: center;
 }
 
 /* ===== CONTACT =====*/
